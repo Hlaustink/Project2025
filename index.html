@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Project2025</title>
+</head>
+
+<body class="">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">H&SH<i class='bx bxs-buildings'></i></a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home-alt-2'></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#popular" class="nav__link">
+                            <i class='bx bx-building-house'></i>
+                            <span>Residences</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#value" class="nav__link">
+                            <i class='bx bx-award'></i>
+                            <span>Value</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-phone'></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <i class="bx bx-moon change-theme" id="theme-button"></i>
+
+            <!-- <a href="#" class="button nav__button">Subscribe</a> -->
+
+        </nav>
+
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home_data">
+                    <h1 class="home__title">
+                        Discover Most Suitable Properties
+                    </h1>
+                    <p class="home__description">
+                        Find a variety of properties that suit you very easily, forget all difficulties in finding a
+                        residence for you
+                    </p>
+
+                    <div class="home__value">
+                        <div>
+                            <h1 class="home__value-number">
+                                300<span>+</span>
+                            </h1>
+                            <span class="home__value-description">
+                                Rental <br> Properties
+                            </span>
+                        </div>
+
+                        <div>
+                            <h1 class="home__value-number">
+                                100<span>+</span>
+                            </h1>
+                            <span class="home__value-description">
+                                On Sale <br> Properties
+                            </span>
+                        </div>
+
+                        <div>
+                            <h1 class="home__value-number">
+                                2K<span>+</span>
+                            </h1>
+                            <span class="home__value-description">
+                                Happy <br> Clients
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Schedule a Visit Button -->
+        <button class="schedule-btn" onclick="document.getElementById('visitModal').style.display='flex'">Schedule a Visit</button>
+                </div>
+
+                <div class="home__images">
+                    <div class="home__orbe"></div>
+                    <div class="home__img">
+                        <img src="Page2.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--==================== POPULAR ====================-->
+        <section class="popular section" id="popular">
+            <div class="container">
+                <span class="section__subtitle">
+                    Best Choice
+                </span>
+                <h2 class="section__title">
+                    Popular <span>residences.</span>
+                </h2>
+                <div class="popular__container swiper">
+                    <div class="swiper-wrapper">
+
+                        <article class="popular__card swiper-slide">
+                            <img class="popular__img" src="project1.jpg" alt="">
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    <span>KES</span>29M Furnished
+                                    <span>KES</span>27.5M Unfurnished
+                                </h2>
+                                <h3 class="popular__title">
+                                    General Mathenge
+                                </h3>
+                                <p class="popular__description">
+                                    Samar Residency
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img class="popular__img" src="Project2.jpg" alt="arrr">
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    <span>KES</span>18.5M
+                                </h2>
+                                <h3 class="popular__title">
+                                    Brookside Drive
+                                </h3>
+                                <p class="popular__description">
+                                    Brookside Heights
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img class="popular__img" src="project3.jpg" alt="">
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    <span>KES</span>8.5M 2BR
+                                </h2>
+                                <h3 class="popular__title">
+                                    Mbanya Drive
+                                </h3>
+                                <p class="popular__description">
+                                    Rundaview apartments
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img class="popular__img" src="project5.jpg" alt="">
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    <span>KES</span>18.5M
+                                </h2>
+                                <h3 class="popular__title">
+                                    Brookside Drive
+                                </h3>
+                                <p class="popular__description">
+                                    Brookside Heights
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img class="popular__img" src="Project4.jpg" alt="">
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    <span>KES</span>9.5M 3BR
+                                </h2>
+                                <h3 class="popular__title">
+                                    Mbanya Drive
+                                </h3>
+                                <p class="popular__description">
+                                    Rundaview apartments
+                                </p>
+                            </div>
+                        </article>
+                        
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class='bx bxs-chevron-right'></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bxs-chevron-left'></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== VALUE ====================-->
+        <section class="value section" id="value">
+            <div class="value__container container grid">
+                <div class="value__images">
+                    <div class="value__orbe">
+                        <div class="value__img">
+                            <img src="Page1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value__content">
+                    <div class="value__data">
+                        <span class="section__subtitle">Our Value</span>
+                        <h2 class="section__title">Value We Give To <span>You.</span></h2>
+                        <p class="value__description">
+                            Lorem, ipsum dolor sit amet od?
+                            Lorem, ipsum dolor sit amet od?
+                            Lorem, ipsum dolor sit amet od?
+                        </p>
+                    </div>
+
+                    <div class="value__accordion">
+
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bx-shield value__accordion-icon'></i>
+                                <h3 class="value__accordion-title">
+                                    Best Interest rates on the market
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    We partner with top financial institutions to offer you competitive mortgage and rental rates tailored to your budget and preferences.
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bx-shield value__accordion-icon'></i>
+                                <h3 class="value__accordion-title">
+                                    Expert Property Advisors
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    Our team of experienced agents is here to guide you through every step — from viewing to negotiation to finalizing your dream property.
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bx-shield value__accordion-icon'></i>
+                                <h3 class="value__accordion-title">
+                                    Verified Listings Only
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <!-- <i class='bx bxs-down-arrow'></i> -->
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    Each property is thoroughly inspected and verified to ensure transparency, safety, and accuracy in listings.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bx-shield value__accordion-icon'></i>
+                                <h3 class="value__accordion-title">
+                                    Seamless Property Tours
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <!-- <i class='bx bxs-down-arrow'></i> -->
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    Schedule visits at your convenience. Virtual tours and flexible in-person appointments make exploring homes easier than ever.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="contact__container container grid">
+                <div class="contact__images">
+                    <div class="contact__orbe">
+
+                    </div>
+
+                    <div class="contact__img">
+                        <img src="contact.png" alt="">
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <div class="contact__data">
+                        <span class="section__subtitle">Contact Us</span>
+                        <h2 class="section__title">
+                            Easy to Contact <span>Us.</span>
+                        </h2>
+                        <p class="contact__description">
+                            If you'd like a site visit, please contact us.
+                        </p>
+                    </div>
+
+                    <div class="contact__card">
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bxs-phone-incoming'></i>
+                                <div>
+                                    <h3 class="contact__card-title">
+                                        Call
+                                    </h3>
+
+                                    <p class="contact__card-description">
+                                        For quick inquiries, call us at
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="contact__card-button popup-enabled">
+                                CALL US
+                            </button>
+                        </div>
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bxs-bell'></i>
+                                <div>
+                                    <h3 class="contact__card-title">
+                                        Email
+                                    </h3>
+
+                                    <p class="contact__card-description">
+                                        For detailed inquiries, email us at
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="contact__card-button popup-enabled">
+                                Email Us
+                            </button>
+                        </div>
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bx-envelope'></i>
+                        <div>
+                                    <h3 class="contact__card-title">
+                                        Whatsapp
+                                    </h3>
+
+                                    <p class="contact__card-description">
+                                        For more information, please contact us via Whatsapp.
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="contact__card-button popup-enabled">
+                                Whatsapp Us
+                            </button>
+                        </div>
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bxs-phone'></i>
+                                <div>
+                                    <h3 class="contact__card-title">
+                                        More Photos
+                                    </h3>
+
+                                    <p class="contact__card-description">
+                                        For more photos on this property, check below
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="contact__card-button popup-enabled">
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SUBSCRIBE ====================-->
+        <section class="subscribe section">
+            <div class="subscribe__container container">
+                <h1 class="subscribe__title">
+                    Get Started with Us
+                </h1>
+                <p class="subscribe__description">
+                    Embark on your real estate journey with us. Whether you're looking to buy, sell, or invest, our team
+                    of experts is here to guide you every step of the way. Discover your dream property, explore our
+                    services, and experience a seamless real estate experience like never before. </p>
+                <a href="#" class="button subscribe__button popup-enabled">
+                    Get started
+                </a>
+
+            </div>
+        </section>
+    </main>
+        <!--==================== SCHEDULE VISIT MODAL ====================-->
+        <div id="visitModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);justify-content:center;align-items:center;z-index:1000;">
+  <div style="background:#fff;padding:30px;border-radius:8px;min-width:300px;position:relative;">
+    <h2>Schedule a Visit</h2>
+  <form action="https://formsubmit.co/austinkioko506@gmail.com" method="POST" class="visit-form">
+    <input type="hidden" name="_captcha" value="false" />
+    
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <input type="date" name="visit_date" required />
+    <input type="time" name="visit_time" min="08:00" max="17:00" required />
+
+    <textarea name="notes" placeholder="Preferred property, estate, or any note..."></textarea>
+    
+    <button type="submit">Book Visit</button>
+  </form>
+
+    <button onclick="document.getElementById('visitModal').style.display='none'" style="position:absolute;top:10px;right:15px;font-size:1.5em;background:none;border:none;cursor:pointer;">&times;</button>
+  </div>
+</div>
+
+            <!--==================== LOGOS ====================-->
+            <!-- <section class="logos section">
+                <div class="logos__container container grid">
+                    <div class="logos__img">
+                        <img src="assets/img/logo1.png" alt="">
+                    </div>
+                    <div class="logos__img">
+                        <img src="assets/img/logo2.png" alt="">
+                    </div>
+                    <div class="logos__img">
+                        <img src="assets/img/logo3.png" alt="">
+                    </div>
+                    <div class="logos__img">
+                        <img src="assets/img/logo4.png" alt="">
+                    </div>
+                </div>
+            </section> -->
+
+    <!--==================== FOOTER ====================-->
+<footer class="footer section">
+  <div class="footer__container container grid">
+
+    <!-- Logo & Description -->
+    <div class="footer__content">
+      <div class="footer__logo">
+        Project2025 <i class='bx bxs-buildings'></i>
+      </div>
+      <p class="footer__description">
+        Premium real estate solutions, crafted with care and designed for lasting value.
+      </p>
+    </div>
+    <!-- Social Media -->
+    <div class="footer__content social">
+      <h3 class="footer__title">Follow Us</h3>
+      <div class="footer__social">
+        <a href="#" class="footer__social-link" target="_blank"><i class='bx bxl-twitter'></i></a>
+        <a href="#" class="footer__social-link" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="#" class="footer__social-link" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="#" class="footer__social-link" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Info -->
+  <div class="footer__info container">
+    <span class="footer__copy">
+      &copy; 2025 Project2025. All rights reserved.
+    </span>
+    <div class="footer__privacy">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  </div>
+</footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="" class="scrollup" id="scroll-up">
+        <i class='bx bxs-chevrons-up'></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src=""></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="script.js"></script>
+</body>
+
+</html>

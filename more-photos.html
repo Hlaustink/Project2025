@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>More Property Photos</title>
+  <style>
+/* Light mode (default) */
+body {
+  background-color: #f0f0f0;
+  color: #222;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: #222;
+}
+
+/* Gallery grid styles - light mode */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
+  grid-template-rows: repeat(3, auto);   /* 3 rows, height automatic */
+  gap: 16px;
+  padding: 20px;
+  max-width: 1200px;   /* optional max width to keep layout neat */
+  margin: 0 auto;      /* center horizontally */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox styles - light mode */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  color: white;
+}
+
+.lightbox.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.lightbox .close-btn,
+.lightbox .nav-btn {
+  color: white;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #eee;
+  }
+
+  h1 {
+    color: #eee;
+  }
+
+  .gallery img {
+    box-shadow: 0 2px 12px rgba(255,255,255,0.2);
+    filter: brightness(0.9);
+  }
+
+  .gallery img:hover {
+    filter: brightness(1);
+  }
+
+  .lightbox {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .lightbox img {
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+
+  .lightbox .close-btn,
+  .lightbox .nav-btn {
+    color: #eee;
+  }
+}
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center; margin-top:20px;">More Property Photos</h1>
+
+<div class="gallery">
+  <img src="photos/P1.jpg" alt="Property photo 1" />
+  <img src="photos/P2.jpg" alt="Property photo 2" />
+  <img src="photos/P3.jpg" alt="Property photo 3" />
+  <img src="photos/P5.jpg" alt="Property photo 5" />
+  <img src="photos/P8.jpg" alt="Property photo 8" />
+  <img src="photos/P9.jpg" alt="Property photo 9" />
+  <img src="photos/P11.jpg" alt="Property photo 11" />
+  <img src="photos/P12.jpg" alt="Property photo 12" />
+  <img src="photos/P13.jpg" alt="Property photo 13" />
+  <img src="photos/P14.jpg" alt="Property photo 14" />
+  <img src="photos/P15.jpg" alt="Property photo 15" />
+  <img src="photos/P18.jpg" alt="Property photo 18" />
+
+  <!-- Add more photos as needed -->
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <span class="nav-btn prev-btn" id="prevBtn">&#10094;</span>
+  <img src="" alt="Expanded photo" id="lightboxImg" />
+  <span class="nav-btn next-btn" id="nextBtn">&#10095;</span>
+</div>
+
+<script>
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('closeBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+
+  function showLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = galleryImages[currentIndex].src;
+    lightbox.classList.add('active');
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex === 0) ? galleryImages.length - 1 : currentIndex - 1;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex === galleryImages.length - 1) ? 0 : currentIndex + 1;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => showLightbox(index));
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', showPrev);
+  nextBtn.addEventListener('click', showNext);
+
+  // Close lightbox on clicking outside image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
